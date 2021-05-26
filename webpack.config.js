@@ -10,6 +10,9 @@ module.exports = {
     resolve: {
         extensions: ['.js', '.jsx'],
     },
+    devServer: {
+        contentBase: path.resolve(__dirname, 'public')
+    },
     plugins: [new HtmlWebPackPlugin({ template: path.resolve(__dirname, 'public', 'index.html') })],
     module: {
         rules: [
